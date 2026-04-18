@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>한감지♥박부승의 모바일 청첩장</title>
+<title>한감지 ♥ 박부승의 모바일 청첩장</title>
 <meta property="og:type" content="website">
 <meta property="og:title" content="한감지♥박부승의 모바일 청첩장">
 <meta property="og:description" content="2026년 5월 30일 토요일 오후 4시 · 수원 WI 컨벤션 W홀">
@@ -75,6 +75,11 @@ body{font-family:'Gowun Batang',serif;background:var(--bg);color:var(--text);max
 .t-icon{width:26px;height:26px;border-radius:50%;background:var(--pink-pale);display:flex;align-items:center;justify-content:center;font-size:13px;flex-shrink:0;color:var(--pink-deep);}
 .transport-body{font-size:14.5px;color:var(--text-mid);line-height:2.1;font-weight:300;}
 .transport-body b{color:var(--text);font-weight:500}
+.transport-highlight{font-size:15px;color:var(--pink);line-height:2.1;font-weight:700;}
+.transport-highlight b{color:var(--pink-deep);}
+.eco-notice{display:flex;align-items:center;justify-content:center;gap:12px;margin-top:28px;padding:18px 20px;border:1.5px solid var(--pink-soft);border-radius:12px;background:var(--pink-pale);}
+.eco-deco{font-size:18px;flex-shrink:0;}
+.eco-text{font-size:15px;color:var(--pink-deep);text-align:center;line-height:1.9;font-weight:500;font-family:'Gowun Batang',serif;}
 .gallery-wrap{position:relative;padding:0 28px;}
 .gallery-hint{text-align:center;font-size:14px;color:var(--text-soft);margin-bottom:20px;letter-spacing:0.04em;}
 .gallery-slider{overflow:hidden;border-radius:14px;}
@@ -100,6 +105,7 @@ body{font-family:'Gowun Batang',serif;background:var(--bg);color:var(--text);max
 .profile-call{width:100%;padding:9px;border-radius:7px;background:var(--pink-pale);border:1px solid var(--pink-soft);font-size:14px;color:var(--pink-deep);cursor:pointer;font-family:'Gowun Batang',serif;transition:all 0.2s;text-decoration:none;display:block;text-align:center;}
 .profile-call:hover{background:var(--pink-soft);color:#fff;border-color:var(--pink-soft)}
 .account-intro{text-align:center;font-size:15px;color:var(--text-soft);line-height:2;margin-bottom:28px;}
+.acc-group-label{font-size:13px;color:var(--text-soft);letter-spacing:0.08em;margin-bottom:8px;font-weight:500;}
 .acc-wrap{border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;margin-bottom:16px;}
 .acc-row{border-bottom:1px solid var(--line);overflow:hidden;}.acc-row:last-child{border-bottom:none}
 .acc-trigger{width:100%;display:flex;align-items:center;justify-content:space-between;padding:15px 18px;background:var(--white);border:none;cursor:pointer;font-family:'Gowun Batang',serif;font-size:15.5px;color:var(--text);text-align:left;transition:background 0.15s;}
@@ -250,6 +256,10 @@ footer{text-align:center;padding:36px 28px 56px;background:var(--bg-section);bor
         일찍 오실수록 더 가까운 자리에 주차 가능합니다
       </p>
     </div>
+    <div class="transport">
+      <div class="transport-head"><div class="t-icon">단</div><b>조암 단체 버스 출발 일정</b></div>
+      <p class="transport-highlight"><b>조암약국 앞</b> 오후 2시</p>
+    </div>
   </div>
 </section>
 
@@ -317,15 +327,30 @@ footer{text-align:center;padding:36px 28px 56px;background:var(--bg-section);bor
   <div class="sec-divider"><div class="sec-divider-gem"></div></div>
   <div class="rv">
     <p class="account-intro">축하의 마음을 담아 축의금을 전달해 보세요.<br>복사 버튼을 클릭해 계좌번호를 복사할 수 있습니다.</p>
+    <p class="acc-group-label">신랑측</p>
     <div class="acc-wrap">
+      <div class="acc-row">
+        <button class="acc-trigger" onclick="toggleAcc(this)">부) 박흥식 <span class="acc-arrow">∨</span></button>
+        <div class="acc-content"><div class="acc-detail"><div><div class="acc-bank">농협</div><div class="acc-num">571-02-011750</div></div><button class="copy-btn" onclick="doCopy('571-02-011750',this)">복사</button></div></div>
+      </div>
+      <div class="acc-row">
+        <button class="acc-trigger" onclick="toggleAcc(this)">모) 송선순 <span class="acc-arrow">∨</span></button>
+        <div class="acc-content"><div class="acc-detail"><div><div class="acc-bank">농협</div><div class="acc-num">207062-52-014580</div></div><button class="copy-btn" onclick="doCopy('207062-52-014580',this)">복사</button></div></div>
+      </div>
       <div class="acc-row">
         <button class="acc-trigger" onclick="toggleAcc(this)">신랑 박부승 <span class="acc-arrow">∨</span></button>
         <div class="acc-content"><div class="acc-detail"><div><div class="acc-bank">신한은행</div><div class="acc-num">010-2181-5507</div></div><button class="copy-btn" onclick="doCopy('010-2181-5507',this)">복사</button></div></div>
       </div>
+    </div>
+    <p class="acc-group-label" style="margin-top:20px">신부측</p>
+    <div class="acc-wrap">
       <div class="acc-row">
         <button class="acc-trigger" onclick="toggleAcc(this)">신부 한감지 <span class="acc-arrow">∨</span></button>
         <div class="acc-content"><div class="acc-detail"><div><div class="acc-bank">우리은행</div><div class="acc-num">1002-261-963398</div></div><button class="copy-btn" onclick="doCopy('1002-261-963398',this)">복사</button></div></div>
       </div>
+    </div>
+    <div class="eco-notice">
+      <p class="eco-text">환경보호 동참을 위해<br>화환은 마음만 받겠습니다</p>
     </div>
   </div>
 </section>
