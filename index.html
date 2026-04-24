@@ -258,7 +258,7 @@ footer{text-align:center;padding:36px 28px 56px;background:var(--bg-section);bor
     </div>
     <div class="transport">
       <div class="transport-head"><div class="t-icon">단</div><b>조암 단체 버스 출발 일정</b></div>
-      <p class="transport-highlight"><b>오후 2:00</b> — 조암약국 앞 버스 출발<br><b>오후 2:20</b> — 발안농협 경유</p>
+      <p class="transport-highlight"><b>오후 2:00</b> — 조암약국 앞 버스 출발<br><b>오후 2:20</b> — 발안 농협 경유</p>
       <img src="images/map2.png" alt="조암 버스 출발 지도" style="width:100%;border-radius:10px;margin-top:14px;display:block;">
       <div class="eco-notice" style="margin-top:16px;">
         <p class="eco-text">환경보호 동참을 위해<br>화환은 마음만 받겠습니다</p>
@@ -430,7 +430,7 @@ function showToast(msg){const t=document.getElementById('toast');t.textContent=m
 function toggleAcc(btn){const body=btn.nextElementSibling;const isOpen=body.classList.contains('open');document.querySelectorAll('.acc-content').forEach(b=>b.classList.remove('open'));document.querySelectorAll('.acc-trigger').forEach(b=>b.classList.remove('open'));if(!isOpen){body.classList.add('open');btn.classList.add('open')}}
 function doCopy(num,btn){if(!num){showToast('계좌번호를 입력해주세요');return}navigator.clipboard.writeText(num).then(()=>{const orig=btn.textContent;btn.textContent='완료';btn.classList.add('copied');showToast('계좌번호가 복사되었습니다');setTimeout(()=>{btn.textContent=orig;btn.classList.remove('copied')},2000);}).catch(()=>showToast('복사 실패'));}
 
-const photos=['images/g1.webp','images/g2.webp','images/g3.webp','images/g4.webp','images/g5.webp','images/g6.webp','images/g7.webp','images/g8.webp','images/g9.webp','images/g10.webp','images/g11.webp','images/g12.webp','images/g13.webp','images/g14.webp'];
+const photos=['images/g1.webp','images/g2.webp','images/g3.webp','images/g4.webp','images/g5.webp','images/g6.webp','images/g7.webp','images/g8.webp','images/g9.webp','images/g10.webp','images/g11.webp','images/g12.webp','images/g13.webp'];
 let curIdx=0;
 
 // 슬라이더 초기화
