@@ -287,6 +287,7 @@ footer{text-align:center;padding:36px 28px 56px;background:var(--bg-section);bor
         <img src="images/g11.webp" alt="사진 11" onclick="openLB(10)">
         <img src="images/g12.webp" alt="사진 12" onclick="openLB(11)">
         <img src="images/g13.webp" alt="사진 13" onclick="openLB(12)">
+        <img src="images/g14.webp" alt="사진 14" onclick="openLB(13)">
       </div>
     </div>
     <div class="gallery-dots" id="galDots"></div>
@@ -430,7 +431,7 @@ function showToast(msg){const t=document.getElementById('toast');t.textContent=m
 function toggleAcc(btn){const body=btn.nextElementSibling;const isOpen=body.classList.contains('open');document.querySelectorAll('.acc-content').forEach(b=>b.classList.remove('open'));document.querySelectorAll('.acc-trigger').forEach(b=>b.classList.remove('open'));if(!isOpen){body.classList.add('open');btn.classList.add('open')}}
 function doCopy(num,btn){if(!num){showToast('계좌번호를 입력해주세요');return}navigator.clipboard.writeText(num).then(()=>{const orig=btn.textContent;btn.textContent='완료';btn.classList.add('copied');showToast('계좌번호가 복사되었습니다');setTimeout(()=>{btn.textContent=orig;btn.classList.remove('copied')},2000);}).catch(()=>showToast('복사 실패'));}
 
-const photos=['images/g1.webp','images/g2.webp','images/g3.webp','images/g4.webp','images/g5.webp','images/g6.webp','images/g7.webp','images/g8.webp','images/g9.webp','images/g10.webp','images/g11.webp','images/g12.webp','images/g13.webp'];
+const photos=['images/g1.webp','images/g2.webp','images/g3.webp','images/g4.webp','images/g5.webp','images/g6.webp','images/g7.webp','images/g8.webp','images/g9.webp','images/g10.webp','images/g11.webp','images/g12.webp','images/g13.webp','images/g14.webp'];
 let curIdx=0;
 
 // 슬라이더 초기화
